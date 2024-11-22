@@ -4,6 +4,7 @@
   background-color: var(--header-color);
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 .nav {
   display: flex;
