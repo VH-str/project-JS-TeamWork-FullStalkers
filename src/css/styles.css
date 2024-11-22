@@ -8,6 +8,9 @@
 @import url('./global.css');
 @import url('./fonts.css');
 @import url('./common.css');
+@import url('./animations.css');
+@import url('./base.css');
+
 @import url('./css_partials/header.css');
 @import url('./css_partials/hero.css');
 @import url('./css_partials/about-me.css');
