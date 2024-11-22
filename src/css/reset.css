@@ -1,3 +1,4 @@
+/* Reset styles */
 h1,
 h2,
 h3,
@@ -31,4 +32,12 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
 }

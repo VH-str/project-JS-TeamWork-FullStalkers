@@ -4,15 +4,23 @@
   | default @import url()
   |============================
 */
-/* Common styles */
 @import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
-
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('./common.css');
+@import url('./css_partials/header.css');
+@import url('./css_partials/hero.css');
+@import url('./css_partials/about-me.css');
+@import url('./css_partials/benefits.css');
+@import url('./css_partials/faq.css');
+@import url('./css_partials/my-projects.css');
+@import url('./css_partials/reviews.css');
+@import url('./css_partials/footer.css');
+@import url('./css_partials/mobile-form.css');
+@import url('./css_partials/tech-skills.css');
+@import url('./css_partials/work-together.css');
+:root {
+  --font-family: 'Inter', sans-serif;
+  --color-dark: #040306;
+  --color-dark-blue: #0e1823;
+  --color-dark-green: #1b414b;
+  --color-light: #fbfbfb;
+}
