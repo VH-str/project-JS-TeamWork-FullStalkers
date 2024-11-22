@@ -20,10 +20,40 @@
 @import url('./css_partials/mobile-form.css');
 @import url('./css_partials/tech-skills.css');
 @import url('./css_partials/work-together.css');
+
 :root {
-  --font-family: 'Inter', sans-serif;
-  --color-dark: #040306;
-  --color-dark-blue: #0e1823;
-  --color-dark-green: #1b414b;
-  --color-light: #fbfbfb;
+  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Poppins', 'Impact', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+
+  /* emilys-candy-regular - latin */
+
+  color: #292929;
+  /* background-color: rgba(250, 250, 250, 0.87); */
+  background-color: rgba(250, 250, 250, 1);
+  --header-color: rgba(250, 250, 250, 1);
+  --accet-green: #00b068;
+  --hover-green: #009156;
+  --color: #292929;
+  --project-button: #e4e5e6;
+  --project-button-hover: #bbbbbb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.bg-dark {
+  color: #f0f0f0;
+  background-color: rgba(30, 32, 35, 1);
+  --header-color: rgba(30, 32, 35, 1);
+  --accet-green: #14c57c;
+  --color: #f0f0f0;
+  --project-button: #2a2d32;
+  --project-button-hover: #3b3f45;
 }
