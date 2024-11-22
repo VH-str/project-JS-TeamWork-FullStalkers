@@ -1,3 +1,52 @@
+.benefits {
+  padding: 10px 0;
+}
+
+.benefits-title {
+  font-family: "Impact", sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23077;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.benefits-item {
+  margin-bottom: 32px;
+}
+
+.benefits-item:last-child {
+  margin-bottom: 0;
+}
+
+.benefits-span {
+  color: #00b068;
+}
+
+.benefits-icon {
+  stroke: var(--accet-green);
+  fill: none;
+  background-color: var(--bn-icon-background-color);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.benefits-h {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55556;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
 @media screen and (max-width: 360px) {
 }
 
