@@ -1,5 +1,44 @@
-<section class="s">
-    <div class="">
-      
+<section class="work_together" aria-labelledby="work-together-title">
+    <div class="container">
+      <h2 id="work-together-title">
+        Let <span class="accent-color">Work Together</span>
+      </h2>
+      <p>CONTACT ME TO TRANSFORM YOUR IDEAS INTO EXCEPTIONAL SOLUTIONS</p>
     </div>
-</section>
+    <address class="address-wt">
+      <ul class="address-wt-list">
+        <li class="address-wt-list-item">
+          <svg class="address-wt-svg" width="24" height="24" aria-hidden="true">
+            <use href="./src/img/sprite.svg#icon-phone"></use>
+          </svg>
+          <a class="address-wt-list-item-link" href="tel:+380904567890" aria-label="Phone number">+380904567890</a>
+        </li>
+        <li class="address-wt-list-item">
+          <svg class="address-wt-svg" width="24" height="24" aria-hidden="true">
+            <use href="./src/img/sprite.svg#icon-mail"></use>
+          </svg>
+          <a class="address-wt-list-item-link" href="mailto:lloydjefferson@gmail.com" aria-label="Email address">lloydjefferson@gmail.com</a>
+        </li>
+        <li class="address-wt-list-item">
+          <svg class="address-wt-svg" width="24" height="24" aria-hidden="true">
+            <use href="./src/img/sprite.svg#icon-location"></use>
+          </svg>
+          <a class="address-wt-list-item-link" href="https://www.google.com/maps?q=New+York" target="_blank" aria-label="Location">USA, New York</a>
+        </li>
+      </ul>
+    </address>
+    <form action="/submit" method="post" class="wt-form">
+      <fieldset>
+        <legend class="sr-only">Contact form</legend>
+        <div class="form-group">
+          <label for="user-email" class="sr-only">Your email</label>
+          <input type="email" class="wt-input" name="user-email" id="user-email" placeholder="Your email*" required>
+        </div>
+        <div class="form-group">
+          <label for="user-message" class="sr-only">Your message</label>
+          <textarea name="user-message" class="wt-message" id="user-message" cols="30" rows="10" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="wt-submit" aria-label="Send your message">SEND MESSAGE</button>
+      </fieldset>
+    </form>
+  </section>
