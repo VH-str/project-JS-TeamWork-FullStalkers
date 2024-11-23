@@ -1,5 +1,5 @@
 .benefits {
-  padding: 10px 0;
+  padding: 0;
 }
 
 .benefits-title {
@@ -12,6 +12,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 40px;
+  margin-top: 80px;
 }
 
 .benefits-item {
@@ -75,6 +76,7 @@
     line-height: 1.14815;
     letter-spacing: 0.02em;
     margin-bottom: 0;
+    margin-top: 124px;
   }
 
   .benefits-h {
@@ -84,4 +86,20 @@
 }
 
 /* Styles for Desktop devices */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  .benefits-title {
+    max-width: 682px;
+    margin-top: 164px;
+  }
+
+  .benefits-list {
+    max-width: 1216px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: -96px;
+  }
+
+    .benefits-item:first-child {
+      grid-column: 1 / span 3;
+      margin-left: 832px;
+    }
+}
