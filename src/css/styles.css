@@ -41,7 +41,7 @@
   --color: #292929;
   --project-button: #e4e5e6;
   --project-button-hover: #bbbbbb;
-  --bn-icon-background-color: #bcdfd1;
+  --bn-icon-background-: #bcdfd1;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -66,23 +66,23 @@
 
 @media only screen and (min-width: 1200px) {
   .bg-dark .benefits {
-    background-image: url("../img/benefits-img/bnf-bg.png");
+    background-image: url('../img/benefits-img/bnf-bg.png');
     background-size: 526px 428px;
     background-repeat: no-repeat;
     background-position: right 32px top 48px;
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi) {
+    only screen and (min-resolution: 192dpi) {
     .bg-dark .benefits {
-      background-image: url("../img/benefits-img/bnf-bg-2х.png");
+      background-image: url('../img/benefits-img/bnf-bg-2х.png');
     }
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3),
-  only screen and (min-resolution: 288dpi) {
+    only screen and (min-resolution: 288dpi) {
     .bg-dark .benefits {
-      background-image: url("../img/benefits-img/bnf-bg-3x.png");
+      background-image: url('../img/benefits-img/bnf-bg-3x.png');
     }
   }
 }
