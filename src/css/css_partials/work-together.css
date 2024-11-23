@@ -1,4 +1,67 @@
 @media screen and (max-width: 360px) {
+ .work-together {
+    margin-bottom: 80px;
+ }   
+.wt-title{
+        margin-bottom: 40px;
+    }
+.wt-contacts {
+    margin-bottom: 40px;
+}
+.wt-text {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--black);
+        margin-bottom: 32px;
+    }
+.address-wt-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+  
+.address-wt-svg {
+        margin-right: 16px;
+        fill: none;
+        stroke: #00b068;
+    }
+.address-wt-list-item-link {
+        color: var(--black);
+    }
+    .wt-form {
+    }
+    .sr-only {
+    }
+    .form-group {
+        margin-bottom: 32px;
+    }
+    .wt-input {
+        width: 100%;
+        height: 48px;
+        padding: 16px;
+        border-radius: 8px;
+        background-color: #e4e5e6;
+        border: none;
+        outline: transparent;
+        resize: none;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+    }
+    .wt-message {
+        height: 128px;
+    }
+    .wt-submit {
+        width: 100%;
+        height: 48px;
+        border-radius: 8px;
+        background-color: #00b068;
+        color: #f0f0f0;
+    }   
 }
 
 @media screen and (min-width: 768px) {

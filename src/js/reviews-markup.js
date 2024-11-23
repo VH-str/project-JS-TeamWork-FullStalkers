@@ -25,25 +25,6 @@ export function createMarkup(data) {
     .join('');
   swiperList.innerHTML = markup;
   buttonWrapper.classList.remove('visually-hidden');
-
-  new Swiper('.swiper', {
-    modules: [Navigation, Keyboard],
-    direction: 'horizontal',
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    keyboard: {
-      enabled: true,
-    },
-    slidesPerView: 1,
-    spaceBetween: 32,
-    breakpoints: {
-      1280: {
-        slidesPerView: 2,
-      },
-    },
-  });
 }
 
 export function notFound() {

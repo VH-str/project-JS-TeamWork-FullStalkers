@@ -47,6 +47,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --tech-top: #bcdfd1;
+  --tech-bottom: #e4e5e6;
 }
 
 .bg-dark {
@@ -58,4 +60,29 @@
   --project-button: #2a2d32;
   --project-button-hover: #3b3f45;
   --bn-icon-background-color: #204136;
+  --tech-top: #204136;
+  --tech-bottom: #2a2d32;
+}
+
+@media only screen and (min-width: 1200px) {
+  .bg-dark .benefits {
+    background-image: url("../img/benefits-img/bnf-bg.png");
+    background-size: 526px 428px;
+    background-repeat: no-repeat;
+    background-position: right 32px top 48px;
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi) {
+    .bg-dark .benefits {
+      background-image: url("../img/benefits-img/bnf-bg-2х.png");
+    }
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (min-resolution: 288dpi) {
+    .bg-dark .benefits {
+      background-image: url("../img/benefits-img/bnf-bg-3x.png");
+    }
+  }
 }
