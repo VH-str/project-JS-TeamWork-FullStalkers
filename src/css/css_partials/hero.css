@@ -10,107 +10,107 @@
 
 @media screen and (min-width: 1280px) {
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+
+/* Загальні стилі */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #333;
+  overflow-x: hidden;
 }
 
-
-/* Секція Hero */
-.hero {
-  text-align: center;
-  padding: 50px 20px;
-  position: relative;
-}
-
-.h1 {
-  width: 384px;
-  height: 312px;
-  gap: 0px;
-  opacity: 0px;
-  display: flex;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-top: 80px;
-  margin-left: 32px;
-  line-height: 1.2;
-}
-
-.hero .h1.accent {
-  color: #00af41;
-}
-
-.img {
-  border-radius: 15px;
-  margin-left: 448px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-top: 104px;
-  margin-left: 448px;
-  gap: 0px;
-  border-radius: 24px 0px 0px 0px;
-  opacity: 0px;
-}
-
-.button-hero {
-  display: inline-flex;
-  align-items: center;
-  padding: 15px 40px;
-  font-size: 1rem;
-  color: #000;
-  background-color: #e9f6f0;
-  border: 2px solid #00af41;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.button-hero .arrow {
-  margin-right: 10px;
-  color: #00af41;
-}
-
-.button-hero:hover {
-  background-color: #00af41;
-  color: #fff;
-}
-
-/* Ссылки соцсетей */
-.list-picture {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  margin: 30px 0 0;
+h1,
+h2,
+p {
+  margin: 0;
   padding: 0;
 }
 
-.list-picture a {
-  text-decoration: none;
-  color: #000;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.list-picture a:hover {
-  color: #00af41;
-}
-
-/* Нижний текст */
-.down {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.h2 {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: #000;
-  max-width: 800px;
+/* Контейнер */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.h2 .accent {
-  color: #00af41;
+/* Стилі для текстової частини */
+.intro {
+  max-width: 50%;
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 1.2;
+}
+
+.intro h2 {
+  font-size: 4rem;
   font-weight: bold;
+  color: #008f4c;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #008f4c;
+  text-decoration: none;
+  border: 2px solid #008f4c;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #008f4c;
+  color: #fff;
+}
+
+/* Стилі фото */
+.profile-picture img {
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-left: 30px;
+}
+
+/* Опис секції */
+.description {
+  text-align: left;
+  padding: 30px 60px;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
+.description p {
+  color: #333;
+}
+
+.description .highlight {
+  color: #008f4c;
+  font-weight: bold;
+}
+
+/* Декоративні елементи */
+body::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(rgba(0, 143, 76, 0.1), transparent);
+  transform: translateY(-50%);
+  z-index: -1;
 }
