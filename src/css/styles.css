@@ -59,3 +59,21 @@
   --project-button-hover: #3b3f45;
   --bn-icon-background-color: #204136;
 }
+
+.bg-dark .benefits {
+  background-image: url("../img/benefits-img/bnf-bg.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+  .bg-dark .benefits {
+    background-image: url("../img/benefits-img/bnf-bg-2х.png");
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (min-resolution: 288dpi) {
+  .bg-dark .benefits {
+    background-image: url("../img/benefits-img/bnf-bg-3x.png");
+  }
+}
