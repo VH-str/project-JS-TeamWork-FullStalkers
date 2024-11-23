@@ -20,6 +20,7 @@
 @import url('./css_partials/mobile-form.css');
 @import url('./css_partials/tech-skills.css');
 @import url('./css_partials/work-together.css');
+@import url('./hero.css');
 
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
