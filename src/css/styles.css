@@ -47,6 +47,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --tech-top: #bcdfd1;
+  --tech-bottom: #e4e5e6;
 }
 
 .bg-dark {
@@ -58,4 +60,6 @@
   --project-button: #2a2d32;
   --project-button-hover: #3b3f45;
   --bn-icon-background-color: #204136;
+  --tech-top: #204136;
+  --tech-bottom: #2a2d32;
 }
