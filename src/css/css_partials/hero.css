@@ -10,3 +10,107 @@
 
 @media screen and (min-width: 1280px) {
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* Секція Hero */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+}
+
+.h1 {
+  width: 384px;
+  height: 312px;
+  gap: 0px;
+  opacity: 0px;
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 80px;
+  margin-left: 32px;
+  line-height: 1.2;
+}
+
+.hero .h1.accent {
+  color: #00af41;
+}
+
+.img {
+  border-radius: 15px;
+  margin-left: 448px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 104px;
+  margin-left: 448px;
+  gap: 0px;
+  border-radius: 24px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.button-hero {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 40px;
+  font-size: 1rem;
+  color: #000;
+  background-color: #e9f6f0;
+  border: 2px solid #00af41;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button-hero .arrow {
+  margin-right: 10px;
+  color: #00af41;
+}
+
+.button-hero:hover {
+  background-color: #00af41;
+  color: #fff;
+}
+
+/* Ссылки соцсетей */
+.list-picture {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+.list-picture a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.list-picture a:hover {
+  color: #00af41;
+}
+
+/* Нижний текст */
+.down {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.h2 .accent {
+  color: #00af41;
+  font-weight: bold;
+}
