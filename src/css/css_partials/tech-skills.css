@@ -1,8 +1,96 @@
-@media screen and (max-width: 360px) {
+.tech-heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.tech-skills-container {
+  padding: 0;
+  max-width: 100%;
+}
+
+.marquee {
+  max-height: 244px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.marquee-line {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 32px 0;
+  height: 104px;
+  z-index: 1;
+  background-color: var(--tech-top);
+  color: var(--color);
+}
+
+.tilted.marquee-line {
+  background-color: var(--tech-bottom);
+  transform: rotate(2deg);
+  color: var(--accet-green);
+}
+
+.marquee-content {
+  display: flex;
+  animation: marqueeLine 15s linear infinite;
+  gap: 16px;
+}
+
+.tilted .marquee-content {
+  animation-direction: reverse;
+}
+
+.marquee-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background-color: var(--accet-green);
+  margin-top: 16px;
+}
+
+.tilted .marquee-dot {
+  background-color: var(--color);
+}
+
+.marquee-text,
+.marquee-dot {
+  position: relative;
+  white-space: nowrap;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-33.3%);
+  }
 }
 
 @media screen and (min-width: 768px) {
-}
+  .marquee {
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+    max-height: 280px;
+  }
 
-@media screen and (min-width: 1280px) {
+  .marquee-line {
+    height: 128px;
+    padding: 40px 0;
+  }
 }
