@@ -4,7 +4,7 @@
   background-color: var(--header-color);
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 .nav {
   display: flex;
@@ -79,6 +79,44 @@
   color: var(--hover-green);
 }
 
+/* off-screen-menu */
+.off-screen-menu {
+  z-index: 2;
+  background-color: var(--header-color);
+  height: 100vh;
+  width: 100%;
+  max-width: 768px;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .3s ease;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.off-screen-menu.active {
+  right: 0;
+  background-color:  var(--header-color);
+}
+
+.mob-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 /* ham menu */
 .ham-menu {
   height: 32px;
@@ -86,6 +124,11 @@
   margin-left: auto;
   position: relative;
 }
+
+.ham-menu.active {
+  background-color: var(--header-color);
+}
+
 .ham-menu span {
   height: 2px;
   width: 100%;
@@ -103,9 +146,9 @@
 .ham-menu span:nth-child(3) {
   top: 75%;
 }
-.ham-menu.active span {
+/* .ham-menu.active span {
   background-color: white;
-}
+} */
 .ham-menu.active span:nth-child(1) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);

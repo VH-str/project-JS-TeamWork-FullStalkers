@@ -200,9 +200,12 @@ function loadProjects() {
     createMarkupProjects(remainingProjects)
   );
 
-
+  let numberScrollSections = 3;
+  if((images.length - loadedProjectsCount) < 3) {
+    numberScrollSections = images.length - loadedProjectsCount;
+  }
   window.scrollBy({
-    top: heightProject * 3,
+    top: heightProject * numberScrollSections,
     left: 0,
     behavior: "smooth",
   });
