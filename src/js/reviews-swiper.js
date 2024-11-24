@@ -1,4 +1,3 @@
-// core version + navigation, pagination modules:
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 // import Swiper and modules styles
