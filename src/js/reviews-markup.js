@@ -33,5 +33,5 @@ export function notFound() {
 </li><li class="not-found swiper-slide">
 	<p class="not-found-text">Not found!</p>
 </li>`;
-  swiperList.innerHTML = notFoundMarkup;
+  swiperList.innerHTML = noFoundMarkup;
 }
