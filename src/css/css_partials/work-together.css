@@ -1,71 +1,165 @@
-@media screen and (max-width: 360px) {
- .work-together {
-    margin-bottom: 80px;
- }   
-.wt-title{
-        margin-bottom: 40px;
-    }
+.work-together {
+  margin-bottom: 80px;
+}
+.wt-title {
+  margin-bottom: 40px;
+}
 .wt-contacts {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .wt-text {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 1.56;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: var(--black);
-        margin-bottom: 32px;
-    }
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 32px;
+}
 .address-wt-list {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-  
-.address-wt-svg {
-        margin-right: 16px;
-        fill: none;
-        stroke: #00b068;
-    }
-.address-wt-list-item-link {
-        color: var(--black);
-    }
-    .wt-form {
-    }
-    .sr-only {
-    }
-    .form-group {
-        margin-bottom: 32px;
-    }
-    .wt-input {
-        width: 100%;
-        height: 48px;
-        padding: 16px;
-        border-radius: 8px;
-        background-color: #e4e5e6;
-        border: none;
-        outline: transparent;
-        resize: none;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.03em;
-    }
-    .wt-message {
-        height: 128px;
-    }
-    .wt-submit {
-        width: 100%;
-        height: 48px;
-        border-radius: 8px;
-        background-color: #00b068;
-        color: #f0f0f0;
-    }   
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.address-wt-list-item {
+  display: flex;
+  text-align: center;
 }
 
+.address-wt-svg {
+  margin-right: 16px;
+  fill: none;
+  stroke: #00b068;
+}
+.address-wt-list-item-link {
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  transition: color 250ms;
+}
+.address-wt-list-item-link:hover {
+  color: #00b068;
+}
+.wt-form {
+  width: 100%;
+}
+.sr-only {
+}
+.form-group {
+  margin-bottom: 32px;
+}
+.wt-input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #e4e5e6;
+  color: #292929;
+  border: none;
+  outline: transparent;
+  resize: none;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+.wt-message {
+  height: 128px;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+}
+.wt-submit {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #00b068;
+  color: #f0f0f0;
+  transition: background-color 250ms;
+}
+.wt-submit:hover {
+  background-color: #009156;
+}
 @media screen and (min-width: 768px) {
+  .work-together {
+    padding-top: 98px;
+    background-image: url('/img/benefits-img/bnf-bg-light.png');
+    background-size: 336px 260px;
+    background-repeat: no-repeat;
+    background-position: right 32px top 7px;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .work-together {
+      background-image: url('/img/benefits-img/bnf-bg-light-2x.png');
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+    .work-together {
+      background-image: url('/img/benefits-img/bnf-bg-light-3x.png');
+    }
+  }
+  .wt-title {
+    margin-bottom: 60px;
+  }
+  .decoration-tabl {
+    display: block;
+  }
+  .wt-contacts {
+    margin-bottom: 60px;
+  }
+  .wt-text {
+    width: 520px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .address-wt-list {
+    flex-direction: row;
+  }
+  .wt-submit {
+    width: 173px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
+  .work-together {
+    padding-top: 164px;
+
+    background-size: 526px 408px;
+
+    background-position: right 32px top 48px;
+  }
+  .wt-title {
+    margin-bottom: 80px;
+  }
+  .wt-contacts {
+    margin-bottom: 0px;
+    margin-right: 136px;
+  }
+  .wt-text {
+    margin-bottom: 120px;
+  }
+  .address-wt-list {
+    flex-direction: column;
+  }
+  .activ-part {
+    display: flex;
+  }
 }

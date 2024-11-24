@@ -1,160 +1,168 @@
 .my_projects {
-    text-align: center;
-  
-    .container {
-      h2 {
-        font-family: Impact;
-        font-size: 52px;
-        font-weight: 400;
-        line-height: 64px;
-        letter-spacing: 1.8px;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        text-transform: uppercase;
-      }
-  
-      span.accet-color {
-        color: var(--accet-green);
-      }
-    }
-  
-    .project-list {
-      width: 320px;
-      margin: 40px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      border-radius: 16px;
-    }
-  
-    .project-img-card {
-      border-radius: 16px;
-      margin-bottom: 16px;
-    }
-  
-    .project_card img {
-      object-fit: cover;
-      transition: 0.7s;
-    }
-  
-    .project_card:hover img {
-      transform: scale(1.03);
-    }
-  
-    .project-skills {
-      text-align: left;
-    }
-  
-    .project-name {
-      font-size: 36px;
-      font-weight: 500;
-      line-height: 48px;
-      letter-spacing: 0.5px;
-      text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-    }
-  
-    .bottom-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-  
-    .visit-button {
-      margin-top: 16px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 125px;
-      height: 48px;
-      color: var(--color);
-      background-color: var(--project-button);
-      border-radius: 8px;
-      border: none;
-  
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0.5px;
-      text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-  
-      &:hover,
-      &:focus {
-        background-color: var(--project-button-hover);
-      }
-    }
-  
-    .more-projects {
-      width: 165px;
-      height: 56px;
-      color: var(--color);
-      background-color: var(--bg-color);
-      border-radius: 8px;
-      border: none;
-  
-      font-size: 20px;
+  text-align: center;
+  margin-top: 80px;
+
+  .container {
+    h2 {
+      font-family: Impact;
+      font-size: 52px;
       font-weight: 400;
-      line-height: 32px;
-      letter-spacing: 0.5px;
-      text-align: left;
+      line-height: 64px;
+      letter-spacing: 1.8px;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
-  
-      &:hover {
-        color: var(--accet-green);
-      }
-  
+      text-transform: uppercase;
     }
-  
-      .more-projects-text {
-        position: relative;
-      }
-  
-      .more-projects-text:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-62%) translateY(100%);
-        width: 80%;
-        height: 2px;
-        border-radius: 2px;
-        transform-origin: center;
-        background: var(--accet-green);
-  
-      }
-  
-    @media only screen and (min-width: 768px) {
-      h2 {
-        font-size: 108px;
-        line-height: 124px;
-      }
-  
-      .project-list {
-        width: 704px;
-        margin: 60px auto;
-        border-radius: 24px;
-        gap: 60px;
-      }
-  
-      .project-img-card {
-        border-radius: 24px;
-      }
-  
-      .bottom-box {
-        flex-direction: row;
-      }
-    }
-  
-    @media only screen and (min-width: 1200px) {
-      .project-list {
-        width: 1008px;
-        margin: 80px auto;
-        gap: 80px;
-      }
+
+    span.accet-color {
+      color: var(--accet-green);
     }
   }
+
+  .project-list {
+    width: 320px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 16px;
+  }
+
+  .project-img-card {
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+
+  .project_card img {
+    object-fit: cover;
+    transition: 0.7s;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .project_card:hover img {
+    transform: scale(1.03);
+  }
+
+  .project-skills {
+    text-align: left;
+  }
+
+  .project-name {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .bottom-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .visit-button {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 125px;
+    height: 48px;
+    color: var(--color);
+    background-color: var(--project-button);
+    border-radius: 8px;
+    border: none;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--project-button-hover);
+    }
+  }
+
+  .more-projects {
+    width: 165px;
+    height: 56px;
+    color: var(--color);
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    border: none;
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    &:hover {
+      color: var(--accet-green);
+    }
+  }
+
+  .more-projects-text {
+    position: relative;
+    text-align: center;
+  }
+
+  .more-projects-text:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 80%;
+    height: 2px;
+    border-radius: 2px;
+    transform-origin: center;
+    background: var(--accet-green);
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 124px;
+
+    h2 {
+      font-size: 108px;
+      line-height: 124px;
+    }
+
+    .project-list {
+      width: 704px;
+      margin: 60px auto;
+      border-radius: 24px;
+      gap: 60px;
+    }
+
+    .project-img-card {
+      border-radius: 24px;
+    }
+
+    .bottom-box {
+      flex-direction: row;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    margin-top: 160px;
+
+    .project-list {
+      width: 1008px;
+      margin: 80px auto;
+      gap: 80px;
+    }
+  }
+}

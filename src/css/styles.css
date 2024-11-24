@@ -50,6 +50,7 @@
   -webkit-text-size-adjust: 100%;
   --tech-top: #bcdfd1;
   --tech-bottom: #e4e5e6;
+  --faq-item-bgcolor: rgba(188, 223, 209, 1);
 }
 
 .bg-dark {
@@ -63,6 +64,7 @@
   --bn-icon-background-color: #204136;
   --tech-top: #204136;
   --tech-bottom: #2a2d32;
+  --faq-item-bgcolor: rgba(32, 65, 54, 1);
 }
 
 @media only screen and (min-width: 1200px) {
