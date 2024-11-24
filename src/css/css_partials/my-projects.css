@@ -4,7 +4,7 @@
 
   .container {
     h2 {
-      font-family: Impact;
+      font-family: "Impact", sans-serif;
       font-size: 52px;
       font-weight: 400;
       line-height: 64px;
@@ -47,14 +47,17 @@
   }
 
   .project-skills {
+    font-family: "Poppins", sans-serif;
     text-align: left;
   }
 
   .project-name {
+    font-family: "Poppins", sans-serif;
     font-size: 36px;
     font-weight: 500;
     line-height: 48px;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -79,6 +82,7 @@
     border-radius: 8px;
     border: none;
 
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -115,6 +119,7 @@
   }
 
   .more-projects-text {
+    font-family: "Poppins", sans-serif;
     position: relative;
     text-align: center;
   }

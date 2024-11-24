@@ -28,7 +28,7 @@
     flex-direction: row;
     gap: 16px;
     
-    width: 592px;
+    width: 320px;
     border-radius: 16px 16px 0 0;
     border-bottom: 1px solid var(--main-bcg);
     overflow: hidden;
@@ -142,6 +142,10 @@
       font-size: 20px;
       line-height: 1.6;
     }
+
+    .faq-item{
+      width: 704px;
+    }
   }
   
   /* ====DESKTOP==== */
@@ -174,11 +178,15 @@
     .faq-question {
       justify-content: space-between;
     }
+
+    .faq-item{
+      width: 592px;
+    }
   }
 
 @media only screen and (min-width: 1200px) {
   .faq-sec {
-    background-image: url("/img/benefits-img/bnf-bg-light.png");
+    background-image: url("/img/faq-img/decor-bg-min.png");
       background-size: 526px 428px;
       background-repeat: no-repeat;
       background-position: left 32px bottom 48px;
