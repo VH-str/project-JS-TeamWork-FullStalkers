@@ -75,4 +75,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // Слухаємо клавішу Escape
     document.addEventListener("keydown", handleEscape);
   });
-  
