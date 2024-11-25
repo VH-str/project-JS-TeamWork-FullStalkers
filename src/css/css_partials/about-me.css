@@ -1,7 +1,5 @@
-.about-section {
-  min-width: 320px;
-  max-width: 375px;
-  height: auto;
+.background-container {
+  display: none;
 }
 
 .about-title {
@@ -12,14 +10,11 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: left;
-  color: #292929;
-  width: 217px;
-  height: 64px;
-  margin-left: 2px;
+  color: var(--color);
 }
 
 .one-line {
-  color: #00b068;
+  color: var(--accet-green);
 }
 
 .about-foto {
@@ -45,44 +40,33 @@
   justify-content: flex-start;
   flex-direction: column;
   margin-top: 40px;
+  gap: 32px;
 }
 
 .about-subtitle {
+  font-weight: 500;
+  font-size: 32px;
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--color);
 }
 
-.about-text-bio {
+.about-text {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  margin-top: 32px;
-}
+  gap: 24px;
 
-.text-one {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: #292929;
-  height: auto;
-  max-width: 100%;
-}
-
-.text-two {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #292929;
-  margin-top: 24px;
-  height: auto;
-  max-width: 100%;
+  color: var(--color);
 }
+
 .about-educ {
   margin-top: 40px;
 }
@@ -112,14 +96,6 @@
   background: #00b068;
   transform: rotate(-180deg);
 }
-.about-item {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: #292929;
-}
 
 .about-role {
   margin-top: 40px;
@@ -132,14 +108,20 @@
   }
   .about-container {
     width: 768px;
-    height: 1264px;
     padding: 0px 32px;
     position: relative;
+  }
 
+  .background-container {
+    display: block;
+    position: absolute;
+    width: 336px;
+    height: 252px;
     background-image: url('../img/about/about-dec-tablet.png');
     background-repeat: no-repeat;
-    background-position: 390px 850px;
-    background-size: auto;
+    background-size: cover;
+    right: 0px;
+    top: 692px;
   }
 
   .about-title {
@@ -161,17 +143,8 @@
     position: absolute;
     top: 164px;
     left: 400px;
-    width: 336px;
-    height: 680px;
+    max-width: 336px;
     margin: 0;
-  }
-  .text-one {
-    max-width: 336px;
-  }
-
-  .text-two {
-    max-width: 336px;
-    margin-top: 24px;
   }
 
   .about-subtitle {
@@ -210,11 +183,18 @@
 
   .about-container {
     width: 1280px;
-    height: 1244px;
     padding: 0px 32px;
-    margin: 0 auto;
-    background-image: url('../img/about/about-dec-desctop.png');
-    background-position: 855px 685px;
+  }
+
+  .background-container {
+    position: absolute;
+    width: 384px;
+    height: 288px;
+    background-image: url('../img/about/about-dec-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 104px;
+    top: 528px;
   }
 
   .about-foto {
@@ -226,19 +206,7 @@
 
   .about-bio {
     left: 760px;
-    width: 488px;
-    height: 488px;
-  }
-
-  .text-one {
     max-width: 488px;
-    height: 168px;
-  }
-
-  .text-two {
-    max-width: 488px;
-    height: 216px;
-    margin-top: 24px;
   }
 
   .about-tab {
