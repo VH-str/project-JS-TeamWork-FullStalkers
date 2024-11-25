@@ -2,7 +2,7 @@
   <h2 id="work-together-title" class="benefits-title wt-title">
     LET'S <span class="benefits-span">WORK TOGETHER</span>
   </h2>
-  <div class="activ-part">
+  < class="activ-part">
     <div class="wt-contacts">
       <p class="wt-text">
         CONTACT ME TO TRANSFORM YOUR IDEAS INTO EXCEPTIONAL SOLUTIONS
@@ -62,18 +62,21 @@
       </address>
     </div>
     <form action="/submit" method="post" class="wt-form">
-      <legend class="sr-only"></legend>
-      <div class="form-group">
-        <label for="user-email" class="sr-only"></label>
-        <input
-          type="email"
-          class="wt-input"
-          name="user-email"
-          id="user-email"
-          placeholder="Your email*"
-          required
-        />
-      </div>
+  <fieldset>
+    <legend class="sr-only"></legend>
+    <div class="form-group">
+      <label for="user-email" class="sr-only"></label>
+      <input
+        type="email"
+        class="wt-input"
+        name="user-email"
+        id="user-email"
+        placeholder="Your email*"
+        required
+      />
+    </div>
+  </fieldset>
+</form>
       <div class="form-group">
         <label for="user-message" class="sr-only"></label>
         <textarea
