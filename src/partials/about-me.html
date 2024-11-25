@@ -1,41 +1,47 @@
-<section class="about-section section" id="about-me">
-  <div class="container about-container">
-    <h2 class="about-title">ABOUT <span class="one-line">ME</span></h2>
+<section class="section-wrapper abt" id="about">
+  <div class="container section-about-me">
+    <h2 class="about-me-section">
+      About <span class="about-me-section-span">me</span>
+    </h2>
+    <div class="about-me-container">
+      <picture class="about-me-photo">
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            /img/about/about-me-pc.jpg    1x,
+            /img/about/about-me-pc-2x.jpg 2x
+          "
+          type="image/jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            /img/about/about-me-tab.jpg    1x,
+            /img/about/about-me-tab-2x.jpg 2x
+          "
+          type="image/jpg"
+        />
+        <source
+          media="(max-width: 767.98px)"
+          srcset="
+            /img/about/about-me-mob.jpg    1x,
+            /img/about/about-me-mob-2x.jpg 2x
+          "
+          type="image/jpg"
+        />
 
-    <picture>
-      <source
-        srcset="
-          ./img/about/about-desktop-1x.jpg 1x,
-          ./img/about/about-desktop-2x.jpg 2x
-        "
-        media="(min-width:1280px)"
-      />
-      <source
-        srcset="
-          ./img/about/about-tablet-1x.jpg 1x,
-          ./img/about/about-tablet-2x.jpg 2x
-        "
-        media="(min-width:768px)"
-      />
-      <source
-        srcset="
-          ./img/about/about-mobile-1x.jpg 1x,
-          ./img/about/about-mobile-2x.jpg 2x
-        "
-        media="(max-width:767px)"
-      />
-      <img
-        class="about-foto"
-        src="./img/about/about-desktop-1x.jpg"
-        alt="Lloyd Jefferson"
-        width="320"
-      />
-    </picture>
+        <img
+          src="/img/about/about-me-mob-2x.jpg"
+          alt="My photo"
+          width="384"
+          height="448"
+          class="about-me-img"
+        />
+      </picture>
+      <div class="bio">
+        <h3 class="bio-title">BIO</h3>
 
-    <div class="about-bio">
-      <h3 class="about-subtitle">BIO</h3>
-      <div class="about-text-bio">
-        <p class="about-text text-one">
+        <p class="bio-text">
           I'm Lloyd Jefferson, a talented programmer specializing in software
           development. My expertise spans various programming languages and
           technologies, and I am dedicated to continually enhancing my skills. I
@@ -43,7 +49,8 @@
           leveraging a high level of analytical skills to effectively tackle
           even the most challenging tasks.
         </p>
-        <p class="about-text text-two">
+
+        <p class="bio-text">
           Adaptable to both independent and team-oriented work, I collaborate
           seamlessly with colleagues, exchanging ideas and finding optimal
           solutions. My professional maturity enables me to navigate challenges
@@ -54,40 +61,51 @@
         </p>
       </div>
     </div>
-    <div class="about-tab">
-      <div class="about-educ">
-        <h3 class="about-subtitle">EDUCATION</h3>
-        <ul class="about-list">
-          <li class="about-list-item">
-            <p class="about-text about-item">
-              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
-              York
+    <div class="about-me-info">
+      <div class="about-me-content-item">
+        <h4 class="educ-title">EDUCATION</h4>
+        <ul class="educ-list">
+          <li class="educ-list-item">
+            <span class="list-mark">&#9679;</span>
+            <p class="educ-list-text">
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
             </p>
           </li>
-          <li class="about-list-item">
-            <p class="about-text about-item">
+          <li class="educ-list-item">
+            <span class="list-mark">&#9679;</span>
+            <p class="educ-list-text">
               2019 - 2020 / Advanced Web Development Certificate, GoIT IT
               School, New York
             </p>
           </li>
-          <li class="about-list-item">
-            <p class="about-text about-item">
+          <li class="educ-list-item">
+            <span class="list-mark">&#9679;</span>
+            <p class="educ-list-text">
               2020 - 2022 / Advanced Blender Animation Techniques, Udemy
             </p>
           </li>
         </ul>
       </div>
-      <div class="about-role">
-        <h3 class="about-subtitle">ROLE</h3>
-        <ul class="about-list">
-          <li class="about-list-item">
-            <p class="about-text about-item">Frontend development</p>
+      <div class="about-me-content-list">
+        <h4 class="role-title">ROLE</h4>
+        <ul class="role-list">
+          <li class="role-list-item">
+            <span class="list-mark">&#9679;</span>
+            <p class="role-list-text">
+              Frontend development
+            </p>
           </li>
-          <li class="about-list-item">
-            <p class="about-text about-item">HeadlessCMS, Wordpress</p>
+          <li class="role-list-item">
+            <span class="list-mark">&#9679;</span>
+            <p class="role-list-text">
+              HeadlessCMS, Wordpress
+            </p>
           </li>
-          <li class="about-list-item">
-            <p class="about-text about-item">Blender (enjoy)</p>
+          <li class="role-list-item">
+            <span class="list-mark">&#9679;</span>
+            <p class="role-list-text">
+              Blender (enjoy)
+            </p>
           </li>
         </ul>
       </div>
