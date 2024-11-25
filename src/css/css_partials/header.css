@@ -98,8 +98,11 @@
   transition: .3s ease;
 
   background-image: url("/img/my_projects/decorbg1.png");
+  /* background-repeat: no-repeat;
+  background-position: right 50px top 68px; */
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: right 50px top 68px;
+  background-size: cover;
 
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -183,5 +186,23 @@
 
   .ham-menu {
     display: none;
+  }
+
+  .off-screen-menu {
+    display: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .off-screen-menu {
+    background-image: url("/img/my_projects/decorbg2.png");
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3),
+(min-resolution: 288dpi) {
+  .off-screen-menu {
+    background-image: url("/img/my_projects/decorbg3.png");
   }
 }
