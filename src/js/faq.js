@@ -15,30 +15,40 @@ document.addEventListener('DOMContentLoaded', () => {
   firstArrow.classList.add('open');  
   firstQuestion.classList.add('active');
 
-
   faqItems.forEach(item => {
     const questionButton = item.querySelector('.faq-question');
     const answer = item.querySelector('.faq-answer');
     const arrow = item.querySelector('.faq-arrow');
 
+    // Обробник події для кнопки запитання
     questionButton.addEventListener('click', () => {
-      const isExpanded = answer.classList.contains('open');
-      
-      
-      faqItems.forEach(i => {
-        i.classList.remove('open'); 
-        i.querySelector('.faq-answer').classList.remove('show');
-        i.querySelector('.faq-arrow').classList.remove('open');
-        i.querySelector('.faq-question').classList.remove('active'); 
-      });
+      toggleItem(item, answer, arrow, questionButton);
+    });
 
-      
-      if (!isExpanded) {
-        item.classList.add('open');
-        answer.classList.add('show');
-        arrow.classList.add('open');
-        questionButton.classList.add('active');
-      }
+    // Обробник події для стрілочки
+    arrow.addEventListener('click', (event) => {
+      event.stopPropagation(); // Запобігаємо спливанню події
+      toggleItem(item, answer, arrow, questionButton);
     });
   });
+
+  function toggleItem(item, answer, arrow, questionButton) {
+    const isExpanded = answer.classList.contains('show');
+    
+    // Закриваємо всі елементи
+    faqItems.forEach(i => {
+      i.classList.remove('open'); 
+      i.querySelector('.faq-answer').classList.remove('show');
+      i.querySelector('.faq-arrow').classList.remove('open');
+      i.querySelector('.faq-question').classList.remove('active'); 
+    });
+
+    // Відкриваємо або закриваємо поточний елемент
+    if (!isExpanded) {
+      item.classList.add('open');
+      answer.classList.add('show');
+      arrow.classList.add('open');
+      questionButton.classList.add('active');
+    }
+  }
 });
