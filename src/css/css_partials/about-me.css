@@ -3,13 +3,10 @@
   padding-bottom: 80px;
 }
 
-<<<<<<< HEAD
-=======
-.section-about-me{
-  font-family: "Poppins", sans-serif;
+.section-about-me {
+  font-family: 'Poppins', sans-serif;
 }
 
->>>>>>> 3a916320e245d5149d52e08287591d882a95b77c
 .about-me-section {
   font-family: 'Impact', sans-serif;
   font-size: 52px;
@@ -21,11 +18,7 @@
 }
 
 .about-me-section-span {
-<<<<<<< HEAD
-  color: var(--accent-cl);
-=======
   color: var(--accet-green);
->>>>>>> 3a916320e245d5149d52e08287591d882a95b77c
 }
 
 .bio-text {
@@ -38,55 +31,18 @@
 .about-me-img {
   border-radius: 18px;
   margin-bottom: 40px;
-<<<<<<< HEAD
 }
 
-.educ-list-item::before,
-.role-list-item::before {
-  content: '';
-  display: inline-block;
-  border-radius: 1px;
-  width: 4px;
-  height: 4px;
-  background: var(--accent-cl);
-  transform: rotate(-180deg);
-  position: relative;
-  left: 10px;
-  top: 20px;
-}
-
-.about-me-info {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.educ-title {
-  padding-top: 40px;
-}
-
-.educ-title,
-.role-title,
-.bio-title {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: var(--main-cl);
-}
-
-=======
-}
-
-.educ-list, .role-list{
+.educ-list,
+.role-list {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   gap: 20px;
 }
 
-.educ-list-item, .role-list-item{
+.educ-list-item,
+.role-list-item {
   display: flex;
   margin-left: 5px;
 }
@@ -98,7 +54,7 @@
   gap: 20px;
 }
 
-.list-mark{
+.list-mark {
   color: var(--accet-green);
 }
 
@@ -123,24 +79,16 @@
   color: var(--main-cl);
 }
 
->>>>>>> 3a916320e245d5149d52e08287591d882a95b77c
 .educ-list,
 .role-list {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-=======
   color: var(--accet-green);
->>>>>>> 3a916320e245d5149d52e08287591d882a95b77c
 }
 
 .educ-list-text,
 .role-list-text {
-<<<<<<< HEAD
-  color: var(--main-cl);
-=======
   color: var(--color);
->>>>>>> 3a916320e245d5149d52e08287591d882a95b77c
   margin-left: 32px;
 }
 
@@ -182,10 +130,6 @@
     gap: 136px;
   }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3a916320e245d5149d52e08287591d882a95b77c
   .educ-title,
   .role-title,
   .bio-title {
@@ -200,15 +144,8 @@
     background-repeat: no-repeat;
     background-position: right 36px bottom 156px;
     background-size: auto;
-<<<<<<< HEAD
   }
 
-=======
-
-  }
-
-  
->>>>>>> 3a916320e245d5149d52e08287591d882a95b77c
   .about-me-info {
     flex-direction: row;
   }
@@ -248,7 +185,6 @@
   .about-me-container {
     justify-content: flex-end;
     gap: 136px;
-<<<<<<< HEAD
   }
 
   .section-about-me {
@@ -269,29 +205,5 @@
   .about-me-info {
     padding-left: 210px;
     gap: 136px;
-=======
   }
-
-  .section-about-me {
-      background-image: url(/images/about/bg-2-min-min.png);
-      background-repeat: no-repeat;
-      background-position: right 32px bottom 230px;
-      background-size: auto;
->>>>>>> 3a916320e245d5149d52e08287591d882a95b77c
-  }
-
-  .bio-text {
-    width: 488px;
-  }
-   
-   .about-me-content-item {
-    width: 384px;
-   }
-
-   
-   
-   .about-me-info {
-    padding-left: 210px;
-    gap: 136px;
-   }
 }
