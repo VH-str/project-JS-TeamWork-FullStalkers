@@ -285,7 +285,4 @@ body.bg-dark .hero-link:hover::after {
 }
 
 @media screen and (min-width: 1280px) {
-  body.bg-dark .span {
-    /* Додайте стилі для .span тут, якщо потрібно */
-  }
 }
