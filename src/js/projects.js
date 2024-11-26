@@ -240,13 +240,9 @@ function createMarkupProjects(images) {
             target="_blank"
           >
             <span>VISIT</span>
-            <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="iconss-visit" viewBox="0 0 24 24">
-<path fill="#00b068" stroke="#00b068" style="stroke: var(--color1, #00b068)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M6.333 25.667l19.333-19.333M25.667 6.333h-18M25.667 6.333v18"></path>
-</symbol>
-</defs>
-</svg>
+            <svg class="iconss-visit" width="24" height="24">
+              <use xlink:href="${icon}#iconss-visit"></use>
+            </svg>
           </a>
         </div>
       </li>`
@@ -257,7 +253,7 @@ function createMarkupProjects(images) {
 function scrollOnLoad() {
   const cards = document.querySelectorAll('.project-list > li');
   const index = loadedProjectsCount - 1;
-
+  
   if (cards[index]) {
     cards[index].scrollIntoView({
       behavior: 'smooth',
@@ -265,3 +261,5 @@ function scrollOnLoad() {
     });
   }
 }
+
+Find More
