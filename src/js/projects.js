@@ -252,7 +252,7 @@ function createMarkupProjects(images) {
             target="_blank"
           >
             <span>VISIT</span>
-            <svg class="button_icon" width="24" height="24">
+            <svg class="icon-icon_visit" width="24" height="24">
               <use xlink:href="${icon}#icon-icon_visit"></use>
             </svg>
           </a>
