@@ -252,15 +252,6 @@ body.bg-dark .icon {
 }
 
 
-body.bg-dark .img {
-content: url(../hero/dark-hero-small.jpg);
-width: 108px;
-height: 108px;
-margin-top: 21px;
-border-radius: 16px;
-opacity: 0px;
-}
-
 body.bg-dark .hero-text {
   margin-top: 315px;
 }
@@ -277,7 +268,7 @@ body.bg-dark .hero-text {
 }
 
   body.bg-dark .img {
-    content: url('../hero/dark-hero-small.png');
+    content: url('../hero/dark-hero-small.jpg');
     width: 108px;
     height: 108px;
     margin-top: 21px;
