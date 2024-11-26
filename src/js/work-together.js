@@ -1,87 +1,77 @@
-import axios from 'axios';
-import { showModalIzi, showEroorIzi } from './modal.js';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+import { comment } from 'postcss';
 
-const confirmEmail = document.querySelector('.done-icon');
-const formEl = document.querySelector('.input-info');
-const defEmail = document.querySelector('.invalid-email');
-const inputEmail = document.querySelector('.form-input');
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.wt-form');
+  const backdrop = document.querySelector('.backdrop');
+  const modal = document.querySelector('.modal');
+  const closeModalButton = document.querySelector('.close-button-modal');
 
-fillForm();
-function fillForm() {
-  const formDataFromLs = JSON.parse(
-    localStorage.getItem('work-Together-request')
-  );
-  if (formDataFromLs === null) {
-    return;
+  const API_URL = 'https://portfolio-js.b.goit.study/api/requests';
+
+  // Відкриття модального вікна
+  function openModal() {
+    backdrop.classList.add('is-open');
   }
-  for (const key in formDataFromLs) {
-    if (formDataFromLs.hasOwnProperty(key)) {
-      formEl.elements[key].value = formDataFromLs[key];
+
+  // Закриття модального вікна
+  function closeModal() {
+    backdrop.classList.remove('is-open');
+  }
+
+  // Закриття модального вікна по Escape
+  function handleEscape(event) {
+    if (event.key === 'Escape') {
+      closeModal();
     }
   }
-}
 
-const formData = {};
-const saveFormData = event => {
-  const fileName = event.target.name;
-  const fileValue = event.target.value.trim();
+  // Закриття по кліку на backdrop
+  backdrop.addEventListener('click', event => {
+    if (event.target === backdrop) {
+      closeModal();
+    }
+  });
 
-  formData[fileName] = fileValue;
-  localStorage.setItem('work-Together-request', JSON.stringify(formData));
-};
+  // Закриття по кліку на кнопку закриття
+  closeModalButton.addEventListener('click', closeModal);
 
-function checkFormValidity() {
-  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?(\.[a-zA-Z]{2,3})+$/;
-  const isEmailValid =
-    emailPattern.test(inputEmail.value) && inputEmail.value.trim().length > 0;
+  // Обробка форми
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
 
-  if (isEmailValid) {
-    confirmEmail.classList.remove('is-hidden');
-    defEmail.classList.add('is-hidden-text');
-  } else {
-    defEmail.classList.remove('is-hidden-text');
-  }
-}
+    const email = form.querySelector('#user-email').value.trim();
+    const message = form.querySelector('#user-message').value.trim();
 
-function onInputEmail() {
-  if (inputEmail.value.trim().length === 0) {
-    defEmail.classList.add('is-hidden-text');
-    confirmEmail.classList.add('is-hidden');
-  } else {
-    checkFormValidity();
-  }
-}
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, comment }),
+      });
 
-async function onFormSubmit(event) {
-  event.preventDefault();
-  checkFormValidity();
-  const userInfo = JSON.parse(localStorage.getItem('work-Together-request'));
+      if (!response.ok) {
+        throw new Error('Failed to send the request. Please try again.');
+      }
 
-  try {
-    await postData(userInfo);
+      // Якщо запит успішний
+      const result = await response.json();
+      console.log('Success:', result);
 
-    showModalIzi();
+      // Відкриваємо модальне вікно
+      openModal();
 
-    formEl.reset();
-    localStorage.removeItem('work-Together-request');
+      // Очищуємо форму
+      form.reset();
+    } catch (error) {
+      // Повідомлення про помилку
+      alert(`Error: ${error.message}`);
+    }
+  });
 
-    confirmEmail.classList.add('is-hidden');
-    defEmail.classList.add('is-hidden-text');
-  } catch (error) {
-    showEroorIzi(error.message);
-  }
-}
-
-const BASE_URL = 'https://portfolio-js.b.goit.study/api';
-async function postData(obj) {
-  try {
-    const response = await axios.post(`${BASE_URL}/requests`, obj);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-}
-
-formEl.addEventListener('submit', onFormSubmit);
-formEl.addEventListener('change', saveFormData);
-inputEmail.addEventListener('input', onInputEmail);
+  // Слухаємо клавішу Escape
+  document.addEventListener('keydown', handleEscape);
+});
