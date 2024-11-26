@@ -1,4 +1,4 @@
-import icon from '../img/my_projects/icon-icon_visit.svg';
+import icon from '../img/my_projects/icon-visit.svg';
 
 import projectDesk03 from '../img/my_projects/projects-desk-03-min.png';
 import projectDesk03_2x from '../img/my_projects/projects-desk-03@2x-min.png';
@@ -252,8 +252,8 @@ function createMarkupProjects(images) {
             target="_blank"
           >
             <span>VISIT</span>
-            <svg class="icon-icon_visit" width="24" height="24">
-              <use xlink:href="${icon}#icon-icon_visit"></use>
+            <svg class="iconss-visit" width="24" height="24">
+              <use xlink:href="${icon}#iconss-visit"></use>
             </svg>
           </a>
         </div>
