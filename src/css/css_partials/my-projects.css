@@ -20,7 +20,7 @@
   }
 
   .button_icon {
-    stroke: var(--accet-green);
+    color: #00b068;
   }
 
   .project-list {
