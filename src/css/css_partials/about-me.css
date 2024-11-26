@@ -21,11 +21,11 @@
   color: var(--accet-green);
 }
 
-.bio-text {
+.bio-text-wrapper {
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-top: 32px;
 }
 
 .about-me-img {
@@ -62,10 +62,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-}
-
-.educ-title {
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .educ-title,
@@ -140,14 +137,15 @@
   }
 
   .section-about-me {
-    background-image: url(/images/about/bg-7-min.png);
+    background-image: url(/img/about/bg-2-min-min.png);
     background-repeat: no-repeat;
-    background-position: right 36px bottom 156px;
-    background-size: auto;
+    background-position: right 36px bottom 190px;
+    background-size: 336px 252px;
   }
 
   .about-me-info {
     flex-direction: row;
+    margin-top: 60px;
   }
 
   .about-me-content-item {
@@ -156,7 +154,6 @@
 
   .about-me-content-list {
     align-items: center;
-    padding-top: 40px;
   }
 }
 
@@ -188,10 +185,10 @@
   }
 
   .section-about-me {
-    background-image: url(/images/about/bg-2-min-min.png);
+    background-image: url(/img/about/bg-2-min-min.png);
     background-repeat: no-repeat;
-    background-position: right 32px bottom 230px;
-    background-size: auto;
+    background-position: right 32px bottom 264px;
+    background-size: 384px 288px;
   }
 
   .bio-text {

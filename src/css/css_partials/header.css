@@ -6,25 +6,29 @@
   width: 100%;
   z-index: 3;
 }
+
+.header-container {
+  padding: 0;
+}
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  .logo {
-    font-family: "Impact", sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 1.5px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
+.logo {
+  font-family: 'Impact', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 1.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
 
-  span.accet-color {
-    color: var(--accet-green);
-  }
+span.accet-color {
+  color: var(--accet-green);
 }
 
 .left-group {
@@ -69,9 +73,9 @@
   display: none;
 }
 .nav-link {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.03em;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -91,20 +95,20 @@
   right: -100%;
   display: flex;
   flex-direction: column;
-  align-items: center;    
+  align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 3rem;
-  transition: .3s ease;
+  transition: 0.3s ease;
 
-  background-image: url("/img/my_projects/decorbg1.png");
+  background-image: url('/img/my_projects/decorbg1.png');
   /* background-repeat: no-repeat;
   background-position: right 50px top 68px; */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
@@ -115,7 +119,7 @@
 }
 .off-screen-menu.active {
   right: 0;
-  background-color:  var(--header-color);
+  background-color: var(--header-color);
 }
 
 .mob-menu {
@@ -170,6 +174,9 @@
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
+  .header {
+    padding: 32px;
+  }
   .nav-list {
     display: flex;
     align-items: center;
@@ -193,16 +200,14 @@
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .off-screen-menu {
-    background-image: url("/img/my_projects/decorbg2.png");
+    background-image: url('/img/my_projects/decorbg2.png');
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3),
-(min-resolution: 288dpi) {
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
   .off-screen-menu {
-    background-image: url("/img/my_projects/decorbg3.png");
+    background-image: url('/img/my_projects/decorbg3.png');
   }
 }
