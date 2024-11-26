@@ -246,13 +246,15 @@ function createMarkupProjects(images) {
         <p class="project-skills">React, JavaScript, Node JS, Git</p>
         <div class="bottom-box">
           <h3 class="project-name">${alt}</h3>
-          <a href="https://github.com/VH-str/project-JS-TeamWork-FullStalkers" target="_blank">
-            <button class="visit-button">
-              VISIT
-              <svg width="24" height="24">
-                <use xlink:href="${icon}#icon-icon_visit"></use>
-              </svg>
-            </button>
+<a
+            class="visit-button"
+            href="https://github.com/VH-str/project-JS-TeamWork-FullStalkers"
+            target="_blank"
+          >
+            <span>VISIT</span>
+            <svg class="button_icon" width="24" height="24">
+              <use xlink:href="${icon}#icon-icon_visit"></use>
+            </svg>
           </a>
         </div>
       </li>`
