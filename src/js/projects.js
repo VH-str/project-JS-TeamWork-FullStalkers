@@ -1,4 +1,4 @@
-import icon from '../img/icons.svg';
+import icon from '../img/my_projects/icon-icon_visit.svg';
 
 import projectDesk03 from '../img/my_projects/projects-desk-03-min.png';
 import projectDesk03_2x from '../img/my_projects/projects-desk-03@2x-min.png';
@@ -123,7 +123,7 @@ const images = [
     },
   },
   {
-    alt: 'Energy flow webservice',
+    alt: 'Energy flow webservice ',
     img: projectDesk07,
     sources: {
       mobile: {
@@ -246,14 +246,14 @@ function createMarkupProjects(images) {
         <p class="project-skills">React, JavaScript, Node JS, Git</p>
         <div class="bottom-box">
           <h3 class="project-name">${alt}</h3>
-<a
+          <a
             class="visit-button"
-            href="https://github.com/VH-str/project-JS-TeamWork-FullStalker"
+            href="https://github.com/VH-str/project-JS-TeamWork-FullStalkers"
             target="_blank"
           >
             <span>VISIT</span>
             <svg class="button_icon" width="24" height="24">
-              <use href="${icon}#icon-arrow-projects"></use>
+              <use xlink:href="${icon}#icon-icon_visit"></use>
             </svg>
           </a>
         </div>
