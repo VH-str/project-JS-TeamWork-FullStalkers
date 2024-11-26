@@ -52,6 +52,7 @@
   --tech-top: #bcdfd1;
   --tech-bottom: #e4e5e6;
   --faq-item-bgcolor: rgba(188, 223, 209, 1);
+  --faq-item-line-color: rgba(228, 229, 230, 1);
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -68,6 +69,7 @@
   --tech-top: #204136;
   --tech-bottom: #2a2d32;
   --faq-item-bgcolor: rgba(32, 65, 54, 1);
+  --faq-item-line-color: rgba(240, 240, 240, 1);
 }
 
 @media only screen and (min-width: 1200px) {

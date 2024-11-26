@@ -30,7 +30,7 @@
     
     width: 320px;
     border-radius: 16px 16px 0 0;
-    border-bottom: 1px solid var(--main-bcg);
+    border-bottom: 1px solid var(--faq-item-line-color);
     overflow: hidden;
     transition: color var(--time) var(--cubic),
         background-color var(--time) var(--cubic);
