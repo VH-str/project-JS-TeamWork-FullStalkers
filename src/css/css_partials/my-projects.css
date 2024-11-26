@@ -28,6 +28,10 @@
     border-radius: 16px;
   }
 
+  svg {
+    fill: var(--accet-green); /* або будь-який інший колір */
+  }
+
   .project-img-card {
     border-radius: 16px;
     margin-bottom: 16px;
