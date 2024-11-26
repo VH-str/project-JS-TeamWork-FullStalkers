@@ -18,6 +18,9 @@
       color: var(--accet-green);
     }
   }
+  .button_icon {
+    color: var(--accet-green);
+  }
 
   .project-list {
     width: 320px;
