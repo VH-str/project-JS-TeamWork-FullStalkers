@@ -181,14 +181,11 @@ const images = [
 const listProjects = document.querySelector('.project-list');
 const loadMoreButton = document.querySelector('.more-projects');
 
-let projectElem = document.querySelector('li.project_card');
+let loadedProjectsCount = 0;
 
 loadMoreButton.addEventListener('click', loadProjects);
 
-let loadedProjectsCount = 0;
-
 function loadProjects() {
-  const heightProject = projectElem.getBoundingClientRect().height;
   const batchSize = 3;
   const remainingProjects = images.slice(
     loadedProjectsCount,
@@ -200,21 +197,13 @@ function loadProjects() {
     createMarkupProjects(remainingProjects)
   );
 
-  let numberScrollSections = 3;
-  if (images.length - loadedProjectsCount < 3) {
-    numberScrollSections = images.length - loadedProjectsCount;
-  }
-  window.scrollBy({
-    top: heightProject * numberScrollSections,
-    left: 0,
-    behavior: 'smooth',
-  });
-
   loadedProjectsCount += remainingProjects.length;
 
   if (loadedProjectsCount >= images.length) {
     loadMoreButton.classList.add('hidden');
   }
+
+  scrollOnLoad();
 }
 
 function createMarkupProjects(images) {
@@ -242,11 +231,10 @@ function createMarkupProjects(images) {
             loading="lazy"
           />
         </picture>
-
         <p class="project-skills">React, JavaScript, Node JS, Git</p>
         <div class="bottom-box">
           <h3 class="project-name">${alt}</h3>
-<a
+          <a
             class="visit-button"
             href="https://github.com/VH-str/project-JS-TeamWork-FullStalkers"
             target="_blank"
@@ -260,4 +248,16 @@ function createMarkupProjects(images) {
       </li>`
     )
     .join('');
+}
+
+function scrollOnLoad() {
+  const cards = document.querySelectorAll('.project-list > li');
+  const index = loadedProjectsCount - 1;
+
+  if (cards[index]) {
+    cards[index].scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
 }
