@@ -277,13 +277,12 @@ body.bg-dark .hero-text {
 }
 
   body.bg-dark .img {
-    content: url(../hero/dark-hero-small.jpg);
+    content: url('../hero/dark-hero-small.png');
     width: 108px;
     height: 108px;
     margin-top: 21px;
     border-radius: 16px;
-    opacity: 0;
-
+    opacity: 1;
   }
 
 
@@ -298,6 +297,10 @@ body.bg-dark .hero-link:hover::after {
 @media screen and (min-width: 1280px) {
   body.bg-dark .span {
 
+    opacity: 1;
+  }
+  body.bg-dark .hero-text {
+    margin-top: 315px;
   }
 }
  

@@ -1,244 +1,251 @@
-.work-together {
-  margin-bottom: 80px;
+.work-together-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-.wt-title {
+
+.green-collorText {
+  color: #00b068;
+}
+
+.work-together-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  text-transform: uppercase;
   margin-bottom: 40px;
+  color: var(--black);
 }
-.wt-contacts {
-  margin-bottom: 40px;
-}
-.wt-text {
-  font-family: 'Poppins', sans-serif;
+
+.work-together-text {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--black);
+  text-align: left;
   margin-bottom: 32px;
 }
-.address-wt-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.address-wt-list-item {
-  display: flex;
-  text-align: center;
+
+.address-block {
+  font-style: normal;
+  margin-bottom: 40px;
 }
 
-.address-wt-svg {
-  margin-right: 16px;
+.address-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.address {
+  display: flex;
+  gap: 16px;
+  outline: none;
+  transition: color 250ms;
+}
+
+.address:hover,
+.address:focus {
+  color: #00b068;
+}
+
+.item-icon {
   fill: none;
   stroke: #00b068;
 }
-.address-wt-list-item-link {
-  font-family: 'Poppins', sans-serif;
-  color: var(--black);
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  font-style: normal;
-  transition: color 250ms;
-}
-.address-wt-list-item-link:hover {
+
+.email-confirm {
+  margin-bottom: 32px;
   color: #00b068;
 }
-.wt-form {
-  width: 100%;
+
+.invalid-email.is-hidden-text {
+  display: none;
 }
 
-.form-group {
+.form-input {
+  border-radius: 8px;
+  padding-left: 16px;
+  width: 100%;
+  height: 48px;
   margin-bottom: 32px;
-}
-.wt-input {
-  box-sizing: border-box;
-  width: 100%;
-  height: 48px;
-  padding: 16px;
-  border-radius: 8px;
+  color: #292929;
   background-color: #e4e5e6;
-  color: #292929;
-  border: none;
-  outline: transparent;
-  resize: none;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-}
-.wt-message {
-  height: 128px;
-}
-input::placeholder,
-textarea::placeholder {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: #292929;
-}
-.wt-submit {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  width: 100%;
-  height: 48px;
-  border-radius: 8px;
-  background-color: #00b068;
-  color: #f0f0f0;
+  outline: 0.2px solid transparent;
+  border-color: transparent;
+  cursor: pointer;
   transition: background-color 250ms;
 }
-.wt-submit:hover {
+
+.form-input:hover,
+.form-input:focus-within {
+  outline-color: #00b068;
+}
+
+.input-form {
+  position: relative;
+}
+
+.done-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  fill: #00b068;
+}
+
+.done-icon.is-hidden {
+  display: none;
+}
+
+.invalid-email {
+  position: absolute;
+  bottom: 15px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+}
+
+.textela-input {
+  border-radius: 8px;
+  padding-left: 16px;
+  padding-top: 16px;
+  width: 100%;
+  height: 128px;
+  outline: 0.2px solid transparent;
+  border-color: transparent;
+  color: #292929;
+  background-color: #e4e5e6;
+  cursor: pointer;
+  resize: none;
+  transition: background-color 250ms;
+}
+
+.textela-input:hover,
+.textela-input:focus-within {
+  outline-color: #00b068;
+}
+
+.send-button {
+  display: block;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  height: 48px;
+  background-color: #00b068;
+  color: #f0f0f0;
+  font-family: Poppins Medium, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  border-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 250ms;
+}
+
+.send-button:hover,
+.send-button:focus {
   background-color: #009156;
 }
+
 @media screen and (min-width: 768px) {
-  .work-together {
-    padding-top: 98px;
-    background-image: url('/img/benefits-img/bnf-bg-light.png');
-    background-size: 336px 260px;
+  .work-together-container {
+    padding-top: 124px;
+    padding-bottom: 124px;
+    background-image: url('/img/wt/wt.png');
     background-repeat: no-repeat;
-    background-position: right 32px top 7px;
-  }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .work-together {
-      background-image: url('/img/benefits-img/bnf-bg-light-2x.png');
-    }
+    background-position: right 32px top 13px;
+    background-size: 336px 260px;
   }
 
-  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .work-together {
-      background-image: url('/img/benefits-img/bnf-bg-light-3x.png');
-    }
-  }
-  .wt-title {
+  .work-together-title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
     margin-bottom: 60px;
   }
-  .decoration-tabl {
-    display: block;
-  }
-  .wt-contacts {
-    margin-bottom: 60px;
-  }
-  .wt-text {
-    width: 520px;
+
+  .work-together-text {
     font-size: 20px;
     line-height: 1.6;
+    width: 500px;
+    margin-bottom: 32px;
   }
-  .address-wt-list {
+
+  .address-list {
     flex-direction: row;
+    margin-bottom: 60px;
+    column-gap: 16px;
   }
-  .wt-submit {
-    width: 173px;
+
+  .form-input {
+    max-width: 704px;
+  }
+
+  .address-list {
+    flex-direction: row;
+    margin-bottom: 60px;
+    column-gap: 16px;
+  }
+
+  .form-input {
+    max-width: 704px;
+  }
+
+  .textela-input {
+    max-width: 704px;
+  }
+
+  .send-button {
+    max-width: 173px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .work-together {
+  .work-together-container {
     padding-top: 164px;
-
-    background-size: 526px 408px;
-
+    padding-bottom: 164px;
+    background-image: url('/img/wt/wt-desk.png');
+    background-repeat: no-repeat;
     background-position: right 32px top 48px;
+    background-size: 526px 408px;
   }
-  .wt-title {
+
+  .work-together-title {
+    width: 600px;
     margin-bottom: 80px;
   }
-  .wt-contacts {
-    margin-bottom: 0px;
-    margin-right: 136px;
-  }
-  .wt-text {
+
+  .work-together-text {
     margin-bottom: 120px;
   }
-  .address-wt-list {
-    flex-direction: column;
-  }
-  .activ-part {
+
+  .address-list {
     display: flex;
+    flex-direction: column;
+    row-gap: 16px;
   }
-}
-/*==========Modal==========*/
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 15px;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  background-color: #292929;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-.modal {
-  width: 320px;
-  height: 328px;
-  padding: 48px 32px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 16px;
-  background-color: #f0f0f0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.backdrop:not(.is-open) .modal {
-  transform: translate(-50%, -50%) scale(1.5);
-}
-.close-button-modal {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-.close-button-svg {
-  stroke: #292929;
-}
-.modal-title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-align: center;
-  color: #00b068;
-  margin-bottom: 16px;
-}
-.modal-text {
-  padding: 0px 10px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: #292929;
-}
-@media screen and (min-width: 768px) {
-  .modal {
-    width: 492px;
-    height: 280px;
-    padding: 58px;
-    top: 50%;
+
+  .wo-toget-wall {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-input {
+    width: 592px;
+  }
+
+  .wo-toget-wall {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-input {
+    width: 592px;
+  }
+
+  .textela-input {
+    width: 592px;
   }
 }
