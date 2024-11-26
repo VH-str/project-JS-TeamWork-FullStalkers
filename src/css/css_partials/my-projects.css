@@ -19,6 +19,10 @@
     }
   }
 
+  .button_icon {
+    stroke: var(--accent-cl);
+  }
+
   .project-list {
     width: 320px;
     margin: 40px auto;
