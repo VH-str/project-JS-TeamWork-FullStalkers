@@ -30,7 +30,7 @@ import{a as F,i as J,S as W,N as q,K as D,c as M}from"./assets/vendor-D5dh7xdJ.j
             target="_blank"
           >
             <span>VISIT</span>
-            <svg class="button_icon" width="24" height="24">
+            <svg class="icon-icon_visit" width="24" height="24">
               <use xlink:href="${_}#icon-icon_visit"></use>
             </svg>
           </a>
