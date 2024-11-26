@@ -251,7 +251,7 @@ body.bg-dark .icon {
   display: flex;
 }
 
-<<<<<<< HEAD
+
 body.bg-dark .img {
 content: url(../hero/dark-hero-small.jpg);
 width: 108px;
@@ -268,11 +268,13 @@ body.bg-dark .hero-text {
 @media screen and (max-width: 1280px) {
 body.bg-dark .hero-text {
     margin-top: 0;
-=======
+}
+}
 @media screen and (min-width: 1280px) {
   .hero-container {
     padding-top: 184px;
   }
+}
 
   body.bg-dark .img {
     content: url(../hero/dark-hero-small.jpg);
@@ -281,9 +283,9 @@ body.bg-dark .hero-text {
     margin-top: 21px;
     border-radius: 16px;
     opacity: 0;
->>>>>>> a996743fcc597453b186c7046ef3507818036051
+
   }
-}
+
 
 body.bg-dark .hero-link::after {
   background-color: #00B068;
