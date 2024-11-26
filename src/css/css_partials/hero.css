@@ -246,11 +246,14 @@ body.bg-dark .icon {
   }
 
   body.bg-dark .img {
-    content: url(../hero/dark-hero-small.jpg);
+    content: url('../hero/dark-hero-small.png');
     width: 108px;
     height: 108px;
     margin-top: 21px;
     border-radius: 16px;
-    opacity: 0;
+    opacity: 1;
+  }
+  body.bg-dark .hero-text {
+    margin-top: 315px;
   }
 }
