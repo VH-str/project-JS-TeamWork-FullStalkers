@@ -123,7 +123,7 @@ const images = [
     },
   },
   {
-    alt: 'Energy flow webservice ',
+    alt: 'Energy flow webservice',
     img: projectDesk07,
     sources: {
       mobile: {
@@ -181,7 +181,7 @@ const images = [
 const listProjects = document.querySelector('.project-list');
 const loadMoreButton = document.querySelector('.more-projects');
 
-let projectElem = document.querySelector("li.project_card");
+let projectElem = document.querySelector('li.project_card');
 
 loadMoreButton.addEventListener('click', loadProjects);
 
@@ -201,15 +201,14 @@ function loadProjects() {
   );
 
   let numberScrollSections = 3;
-  if((images.length - loadedProjectsCount) < 3) {
+  if (images.length - loadedProjectsCount < 3) {
     numberScrollSections = images.length - loadedProjectsCount;
   }
   window.scrollBy({
     top: heightProject * numberScrollSections,
     left: 0,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
-
 
   loadedProjectsCount += remainingProjects.length;
 
@@ -247,15 +246,15 @@ function createMarkupProjects(images) {
         <p class="project-skills">React, JavaScript, Node JS, Git</p>
         <div class="bottom-box">
           <h3 class="project-name">${alt}</h3>
-          <a href="https://github.com/VH-str/project-JS-TeamWork-FullStalkers" target="_blanc">
-            <button class="visit-button">
-              VISIT
-              <svg width="24" height="24">
-                <use
-                  href="${icon}#icon-icon_visit"
-                ></use>
-              </svg>
-            </button>
+<a
+            class="visit-button"
+            href="https://github.com/VH-str/project-JS-TeamWork-FullStalkers"
+            target="_blank"
+          >
+            <span>VISIT</span>
+            <svg class="button_icon" width="24" height="24">
+              <use xlink:href="${icon}#icon-icon_visit"></use>
+            </svg>
           </a>
         </div>
       </li>`

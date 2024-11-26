@@ -43,6 +43,7 @@
   --project-button: #e4e5e6;
   --project-button-hover: #bbbbbb;
   --bn-icon-background-color: #bcdfd1;
+  --bc-color-hero: #E4E5E6;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,11 +52,14 @@
   --tech-top: #bcdfd1;
   --tech-bottom: #e4e5e6;
   --faq-item-bgcolor: rgba(188, 223, 209, 1);
+  --faq-item-line-color: rgba(228, 229, 230, 1);
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bg-dark {
   color: #f0f0f0;
   background-color: rgba(30, 32, 35, 1);
+  --bc-color-hero: #2A2D32;
   --header-color: rgba(30, 32, 35, 1);
   --accet-green: #14c57c;
   --color: #f0f0f0;
@@ -65,6 +69,7 @@
   --tech-top: #204136;
   --tech-bottom: #2a2d32;
   --faq-item-bgcolor: rgba(32, 65, 54, 1);
+  --faq-item-line-color: rgba(240, 240, 240, 1);
 }
 
 @media only screen and (min-width: 1200px) {
