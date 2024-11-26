@@ -24,13 +24,15 @@ import{a as F,i as J,S as W,N as q,K as D,c as M}from"./assets/vendor-D5dh7xdJ.j
         <p class="project-skills">React, JavaScript, Node JS, Git</p>
         <div class="bottom-box">
           <h3 class="project-name">${o}</h3>
-          <a href="https://github.com/VH-str/project-JS-TeamWork-FullStalkers" target="_blank">
-            <button class="visit-button">
-              VISIT
-              <svg width="24" height="24">
-                <use xlink:href="${_}#icon-icon_visit"></use>
-              </svg>
-            </button>
+<a
+            class="visit-button"
+            href="https://github.com/VH-str/project-JS-TeamWork-FullStalkers"
+            target="_blank"
+          >
+            <span>VISIT</span>
+            <svg class="button_icon" width="24" height="24">
+              <use xlink:href="${_}#icon-icon_visit"></use>
+            </svg>
           </a>
         </div>
       </li>`).join("")}const g=document.querySelector(".ham-menu"),S=document.querySelector(".off-screen-menu");g.addEventListener("click",()=>{g.classList.toggle("active"),S.classList.toggle("active")});S.addEventListener("click",()=>{g.classList.toggle("active"),S.classList.toggle("active")});document.addEventListener("DOMContentLoaded",()=>{const s=document.querySelectorAll(".faq-item"),o=s[0],r=s[0].querySelector(".faq-answer"),c=s[0].querySelector(".faq-arrow"),e=o.querySelector(".faq-question");o.classList.add("open"),r.classList.add("show"),c.classList.add("open"),e.classList.add("active"),s.forEach(a=>{const n=a.querySelector(".faq-question"),i=a.querySelector(".faq-answer"),l=a.querySelector(".faq-arrow");n.addEventListener("click",()=>{t(a,i,l,n)}),l.addEventListener("click",d=>{d.stopPropagation(),t(a,i,l,n)})});function t(a,n,i,l){const d=n.classList.contains("show");s.forEach(u=>{u.classList.remove("open"),u.querySelector(".faq-answer").classList.remove("show"),u.querySelector(".faq-arrow").classList.remove("open"),u.querySelector(".faq-question").classList.remove("active")}),d||(a.classList.add("open"),n.classList.add("show"),i.classList.add("open"),l.classList.add("active"))}});const L=document.querySelector(".swiper-wrapper"),xe=document.querySelector(".button-wrapper");function fe(s){const o=s.map(({author:r,avatar_url:c,review:e,_id:t})=>t===5?`<li class="swiper-slide">
