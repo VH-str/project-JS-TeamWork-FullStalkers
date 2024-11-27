@@ -21,7 +21,6 @@
 @import url('./css_partials/tech-skills.css');
 @import url('./css_partials/work-together.css');
 
-
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'Poppins', 'Impact', system-ui, -apple-system, BlinkMacSystemFont,
@@ -43,7 +42,7 @@
   --project-button: #e4e5e6;
   --project-button-hover: #bbbbbb;
   --bn-icon-background-color: #bcdfd1;
-  --bc-color-hero: #E4E5E6;
+  --bc-color-hero: #e4e5e6;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -54,12 +53,13 @@
   --faq-item-bgcolor: rgba(188, 223, 209, 1);
   --faq-item-line-color: rgba(228, 229, 230, 1);
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --modal-bgcolor: rgba(240, 240, 240, 1);
 }
 
 .bg-dark {
   color: #f0f0f0;
   background-color: rgba(30, 32, 35, 1);
-  --bc-color-hero: #2A2D32;
+  --bc-color-hero: #2a2d32;
   --header-color: rgba(30, 32, 35, 1);
   --accet-green: #14c57c;
   --color: #f0f0f0;
@@ -70,27 +70,28 @@
   --tech-bottom: #2a2d32;
   --faq-item-bgcolor: rgba(32, 65, 54, 1);
   --faq-item-line-color: rgba(240, 240, 240, 1);
+  --modal-bgcolor: rgba(42, 45, 50, 1);
 }
 
 @media only screen and (min-width: 1200px) {
   .bg-dark .benefits {
-    background-image: url("../img/benefits-img/bnf-bg.png");
+    background-image: url('../img/benefits-img/bnf-bg.png');
     background-size: 526px 428px;
     background-repeat: no-repeat;
     background-position: right 32px top 48px;
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi) {
+    only screen and (min-resolution: 192dpi) {
     .bg-dark .benefits {
-      background-image: url("../img/benefits-img/bnf-bg-2х.png");
+      background-image: url('../img/benefits-img/bnf-bg-2х.png');
     }
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3),
-  only screen and (min-resolution: 288dpi) {
+    only screen and (min-resolution: 288dpi) {
     .bg-dark .benefits {
-      background-image: url("../img/benefits-img/bnf-bg-3x.png");
+      background-image: url('../img/benefits-img/bnf-bg-3x.png');
     }
   }
 }
