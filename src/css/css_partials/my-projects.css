@@ -28,7 +28,7 @@
     border-radius: 16px;
   }
   .button_icon use {
-    stroke: red;
+    stroke: #00b068;
   }
   svg {
     fill: var(--accet-green); /* або будь-який інший колір */
