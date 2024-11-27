@@ -1,77 +1,97 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-import { comment } from 'postcss';
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+import { comment } from "postcss";
 
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.wt-form');
-  const backdrop = document.querySelector('.backdrop');
-  const modal = document.querySelector('.modal');
-  const closeModalButton = document.querySelector('.close-button-modal');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".input-info");
+  const backdrop = document.querySelector(".backdrop");
+  const closeModalButton = document.querySelector(".close-button-modal");
 
-  const API_URL = 'https://portfolio-js.b.goit.study/api/requests';
+  const API_URL = "https://portfolio-js.b.goit.study/api/requests";
 
   // Відкриття модального вікна
   function openModal() {
-    backdrop.classList.add('is-open');
+    backdrop.classList.add("is-open");
   }
 
   // Закриття модального вікна
   function closeModal() {
-    backdrop.classList.remove('is-open');
+    backdrop.classList.remove("is-open");
   }
 
-  // Закриття модального вікна по Escape
-  function handleEscape(event) {
-    if (event.key === 'Escape') {
+  // Закриття модального вікна за натисканням Escape
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && backdrop.classList.contains("is-open")) {
       closeModal();
     }
-  }
+  });
 
-  // Закриття по кліку на backdrop
-  backdrop.addEventListener('click', event => {
+  // Закриття модального вікна за кліком на backdrop
+  backdrop.addEventListener("click", (event) => {
     if (event.target === backdrop) {
       closeModal();
     }
   });
 
-  // Закриття по кліку на кнопку закриття
-  closeModalButton.addEventListener('click', closeModal);
+  // Закриття модального вікна за кліком на кнопку
+  closeModalButton.addEventListener("click", closeModal);
 
   // Обробка форми
-  form.addEventListener('submit', async event => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const email = form.querySelector('#user-email').value.trim();
-    const message = form.querySelector('#user-message').value.trim();
+    // Отримання значень з форми
+    const email = form.querySelector(".form-input").value.trim();
+    const message = form.querySelector(".textela-input").value.trim();
+
+    // Перевірка на заповненість полів
+    if (!email || !message) {
+      iziToast.error({
+        title: "Error",
+        message: "Please fill in all required fields.",
+        position: "topRight",
+      });
+      return;
+    }
 
     try {
+      // Відправлення запиту на сервер
       const response = await fetch(API_URL, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, comment }),
       });
 
+      // Перевірка відповіді сервера
       if (!response.ok) {
-        throw new Error('Failed to send the request. Please try again.');
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to send the request. Please try again.");
       }
 
-      // Якщо запит успішний
+      // Успішна відповідь сервера
       const result = await response.json();
-      console.log('Success:', result);
+      console.log("Success:", result);
 
-      // Відкриваємо модальне вікно
+      // Відображення модального вікна
+      iziToast.success({
+        title: "Success",
+        message: "Your message was sent successfully!",
+        position: "topRight",
+      });
       openModal();
 
-      // Очищуємо форму
+      // Очищення форми
       form.reset();
     } catch (error) {
       // Повідомлення про помилку
-      alert(`Error: ${error.message}`);
+      iziToast.error({
+        title: "Error",
+        message: error.message || "Something went wrong. Please try again.",
+        position: "topRight",
+      });
+      console.error("Error:", error);
     }
   });
-
-  // Слухаємо клавішу Escape
-  document.addEventListener('keydown', handleEscape);
 });
