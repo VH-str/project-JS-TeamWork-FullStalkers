@@ -27,8 +27,8 @@
     gap: 40px;
     border-radius: 16px;
   }
-  .button_icon {
-    fill: var(--accet-green); /* або будь-який інший колір */
+  .button_icon use {
+    stroke: red;
   }
   svg {
     fill: var(--accet-green); /* або будь-який інший колір */
