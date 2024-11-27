@@ -225,14 +225,20 @@ function createMarkupProjects(images) {
         <picture>
           <source
             media="(max-width: 767px)"
+              width="320"
+            height="194"
             srcset="${mobile['1x']} 1x, ${mobile['2x']} 2x"
           />
           <source
             media="(max-width: 1279px)"
+             width="704"
+            height="536"
             srcset="${tablet['1x']} 1x, ${tablet['2x']} 2x"
           />
           <source
             media="(min-width: 1280px)"
+             width="1008"
+            height="580"
             srcset="${desktop['1x']} 1x, ${desktop['2x']} 2x"
           />
           <img
