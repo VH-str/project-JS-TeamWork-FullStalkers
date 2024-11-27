@@ -27,36 +27,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Закриття модального вікна за кліком на backdrop
+  // Закриття по кліку на backdrop
   backdrop.addEventListener('click', event => {
     if (event.target === backdrop) {
       closeModal();
     }
   });
 
-  // Закриття модального вікна за кліком на кнопку
+  // Закриття по кліку на кнопку закриття
   closeModalButton.addEventListener('click', closeModal);
 
   // Обробка форми
   form.addEventListener('submit', async event => {
     event.preventDefault();
 
-    // Отримання значень з форми
     const email = form.querySelector('#try-agen').value.trim();
     const message = form.querySelector('#client_comment').value.trim();
 
-    // Перевірка на заповненість полів
-    if (!email || !message) {
-      iziToast.error({
-        title: 'Error',
-        message: 'Please fill in all required fields.',
-        position: 'topRight',
-      });
-      return;
-    }
-
     try {
-      // Відправлення запиту на сервер
       const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
@@ -65,40 +53,30 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({ email, comment }),
       });
 
-      // Перевірка відповіді сервера
-
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(
-          errorData.message || 'Failed to send the request. Please try again.'
-        );
+        throw new Error('Failed to send the request. Please try again.');
       }
 
-      // Успішна відповідь сервера
+      // Якщо запит успішний
       const result = await response.json();
-      console.log('Success:', result);
+      // console.log('Success:', result);
 
-      // Відображення модального вікна
-      iziToast.success({
-        title: 'Success',
-        message: 'Your message was sent successfully!',
-        position: 'topRight',
-      });
-      openModal();
+      // Відкриваємо модальне вікно
+      openModal(result);
 
-      // Очищення форми
-      form.reset();
+      // Очищуємо форму
+      form.reset(result);
     } catch (error) {
       // Повідомлення про помилку
+      // alert(`Error: ${error.message}`);
       iziToast.error({
         title: 'Error',
         message: error.message || 'Something went wrong. Please try again.',
         position: 'center',
       });
-      console.error('Error:', error);
     }
   });
+
   // Слухаємо клавішу Escape
   document.addEventListener('keydown', handleEscape);
 });
-
