@@ -323,6 +323,7 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  color: #292929;
 }
 
 @media only screen and (min-width: 768px) {
