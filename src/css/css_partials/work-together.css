@@ -202,7 +202,6 @@
   }
 }
 
-
 @media screen and (min-width: 1280px) {
   .work-together-container {
     padding-top: 164px;
@@ -243,80 +242,91 @@
 }
 /*==========Modal==========*/
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 15px;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    background-color: #292929;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999;
 }
-.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+
+.is-hidden-back {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
+
 .modal {
-    width: 320px;
-    height: 328px;
-    padding: 48px 32px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 16px;
-    background-color: #f0f0f0;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  width: 320px;
+  padding: 48px 32px;
+  top: 50%;
+  left: 50%;
+  background-color: #fafafa;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 32px;
 }
-.backdrop:not(.is-open) .modal{
-    transform: translate(-50%, -50%) scale(1.5);
+
+.modal-close-btn {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.close-button-modal {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 24px;
-    height: 24px;
-    border: none;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+
+.icon-close-modal {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  stroke: #000000;
 }
-.close-button-svg {
-    stroke: #292929;
-}
+
 .modal-title {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    text-align: center;
-    color: #00b068;
-    margin-bottom: 16px;
+  color: var(--accet-green);
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
 }
+
 .modal-text {
-    padding: 0px 10px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: #292929;
+  padding-top: 16px;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
-@media screen and (min-width: 768px) {
-    .modal {
-        width: 492px;
-        height: 280px;
-        padding: 58px;
-        top: 50%;
-}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 492px;
+    padding: 64px;
+  }
 }
