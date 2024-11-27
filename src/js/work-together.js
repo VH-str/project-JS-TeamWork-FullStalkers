@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, comment }),
+        body: JSON.stringify({ email, comment: message }),
       });
 
       if (!response.ok) {
