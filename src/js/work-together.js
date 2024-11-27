@@ -13,11 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function openModal(result) {
     modal.innerHTML = `<h3 class="modal-title">${result.title}</h3><p class="modal-text">${result.message}</p>`;
     backdrop.classList.remove('is-hidden-back');
+    document.body.style.overflow = 'hidden'; // Запобігання прокручуванню
   }
 
   // Закриття модального вікна
   function closeModal() {
     backdrop.classList.add('is-hidden-back');
+    document.body.style.overflow = ''; // Відновлення прокручування
   }
 
   // Закриття модального вікна по Escape
