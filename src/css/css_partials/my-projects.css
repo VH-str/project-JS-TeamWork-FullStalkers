@@ -31,7 +31,7 @@
     stroke: #00b068;
   }
   svg {
-    fill: var(--accet-green); /* або будь-який інший колір */
+    stroke: #00b068; /* або будь-який інший колір */
   }
 
   .project-img-card {
