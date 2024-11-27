@@ -73,7 +73,7 @@
   height: 48px;
   margin-bottom: 32px;
   color: #292929;
-  background-color: #e4e5e6;
+  background-color: var(--modal-bgcolor);
   outline: 0.2px solid transparent;
   border-color: transparent;
   cursor: pointer;
@@ -121,7 +121,7 @@
   outline: 0.2px solid transparent;
   border-color: transparent;
   color: #292929;
-  background-color: #e4e5e6;
+  background-color: var(--modal-bgcolor);
   cursor: pointer;
   resize: none;
   transition: background-color 250ms;
